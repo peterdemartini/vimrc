@@ -21,6 +21,14 @@ let g:bufExplorerFindActive=1
 let g:bufExplorerSortBy='name'
 map <leader>o :BufExplorer<cr>
 
+""""""""""""""""""""""""""""""
+" => VIM Test 
+""""""""""""""""""""""""""""""
+nmap <silent> <leader>rt :TestNearest<CR>
+nmap <silent> <leader>rT :TestFile<CR>
+nmap <silent> <leader>ra :TestSuite<CR>
+nmap <silent> <leader>rl :TestLast<CR>
+nmap <silent> <leader>rg :TestVisit<CR>
 
 """"""""""""""""""""""""""""""
 " => MRU plugin
@@ -79,7 +87,7 @@ let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=25
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
-map <leader>nf :NERDTreeFind<cr>
+map <leader>nf :NERDTreeCWD <bar> :NERDTreeFind<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

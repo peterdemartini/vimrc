@@ -54,6 +54,7 @@ vim-yankstack https://github.com/maxbrunsfeld/vim-yankstack
 lightline.vim https://github.com/itchyny/lightline.vim
 vim-handlebars https://github.com/nono/vim-handlebars
 tabular https://github.com/godlygeek/tabular
+vim-testdrive https://github.com/monokrome/vim-testdrive
 """.strip()
 
 GITHUB_ZIP = '%s/archive/master.zip'
