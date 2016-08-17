@@ -92,15 +92,10 @@ Remove all clutter and focus only on the essential. Similar to iA Writer or Writ
 * [lightline.vim](https://github.com/itchyny/lightline.vim): A light and configurable statusline/tabline for Vim
 * [vim-handlebars](https://github.com/nono/vim-handlebars)
 * [tabular](https://github.com/godlygeek/tabular)
-* [vim-test](https://github.com/janko-m/vim-test)
 
 ## Included color schemes
 
-* [peaksea](https://github.com/vim-scripts/peaksea): My favorite!
-* [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized)
-* [vim-irblack](https://github.com/wgibbs/vim-irblack)
-* [mayansmoke](https://github.com/vim-scripts/mayansmoke)
-* [vim-pyte](https://github.com/therubymug/vim-pyte)
+* [vim-colorschemes](https://github.com/flazz/vim-colorschemes)
 
 ## Included modes
 

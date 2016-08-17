@@ -147,12 +147,14 @@ set modifiable
 " Enable syntax highlighting
 syntax enable 
 
+" If you want to change the colorscheme when using vim awesome, change it in extended.vim
 try
-    colorscheme desert
+    colorscheme desert 
 catch
 endtry
 
 set background=dark
+
 
 " Set extra options when running in GUI mode
 if has("gui_running")
