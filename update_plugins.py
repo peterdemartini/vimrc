@@ -52,6 +52,7 @@ lightline.vim https://github.com/itchyny/lightline.vim
 vim-handlebars https://github.com/nono/vim-handlebars
 tabular https://github.com/godlygeek/tabular
 vim-colorschemes https://github.com/flazz/vim-colorschemes
+auto-pairs https://github.com/jiangmiao/auto-pairs
 """.strip()
 
 GITHUB_ZIP = '%s/archive/master.zip'
