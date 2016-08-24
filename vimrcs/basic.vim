@@ -313,6 +313,14 @@ autocmd BufWrite *.cson :call DeleteTrailingWS()
 autocmd BufWrite *.yml :call DeleteTrailingWS()
 autocmd BufWrite *.rb :call DeleteTrailingWS()
 
+"auto indent for brackets
+inoremap {<CR> {<CR>}<Esc>O
+
+"" easier write
+nmap <leader>w :w!<cr>
+" easier quit
+nmap <leader>q :q<cr>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ag searching and cope displaying
@@ -377,6 +385,31 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+"paste from outside buffer
+nnoremap <leader>p :set paste<CR>"+p:set nopaste<CR>
+vnoremap <leader>p <Esc>:set paste<CR>gv"+p:set nopaste<CR>
+"copy to outside buffer
+vnoremap <leader>y "+y
+"select all
+nnoremap <leader>a ggVG
+
+"paste from 0 register
+"Useful because `d` overwrites the <quote> register
+nnoremap <leader>P "0p
+vnoremap <leader>P "0p
+
+" vp doesn't replace paste buffer
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
+function! s:Repl()
+  let s:restore_reg = @"
+  return "p@=RestoreRegister()\<cr>"
+endfunction
+vmap <silent> <expr> p <sid>Repl()
+
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
