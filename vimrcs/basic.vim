@@ -197,9 +197,8 @@ set tabstop=2
 set lbr
 set tw=500
 
-set cindent
-set cinkeys-=0#
-set indentkeys-=0#
+set ai "Auto indent
+set si "Smart indent
 set wrap "Wrap lines
 
 
