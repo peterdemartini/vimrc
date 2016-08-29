@@ -199,7 +199,7 @@ set tw=500
 
 set ai "Auto indent
 set si "Smart indent
-set wrap "Wrap lines
+set nowrap "Don't wrap lines
 
 
 """"""""""""""""""""""""""""""
@@ -355,6 +355,7 @@ map <leader>p :cp<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 map <leader>a :Tab /=<cr>
+map <leader>A :Tab /:<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
