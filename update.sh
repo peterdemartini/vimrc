@@ -23,12 +23,21 @@ git_install() {
 }
 
 update_ycm() {
+  echo "** installing youcompleteme"
   pushd "$SOURCE_DIR/youcompleteme" > /dev/null
     git submodule update --init --recursive > /dev/null
+    ./install.py --tern-completer --gocode-completer
   popd > /dev/null
 }
 
+install_brew() {
+  echo "** installing brew dependencies"
+  brew update || exit 1
+  brew install mono cmake the_silver_searcher || exit 1
+}
+
 main() {
+  install_brew
   git_install "mileszs" "ack.vim"
   git_install "rking" "ag.vim"
   git_install "corntrace" "bufexplorer"

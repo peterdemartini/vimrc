@@ -112,4 +112,15 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 " CtrlSpace
 set nocompatible
 set hidden
+
+let g:CtrlSpaceFileEngine = "auto"
+
 nnoremap <silent><C-p> :CtrlSpace O<CR>
+
+if executable("ag")
+  let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+endif
+
+let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
+let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
+let g:CtrlSpaceSaveWorkspaceOnExit = 1
