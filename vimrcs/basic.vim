@@ -333,13 +333,13 @@ map <leader>pp :setlocal paste!<cr>
 
 "paste from outside buffer
 nnoremap <leader>p :set paste<CR>"+p:set nopaste<CR>
-vnoremap <leader>P <Esc>:set paste<CR>gv"+p:set nopaste<CR>
+vnoremap <leader>p <Esc>:set paste<CR>gv"+p:set nopaste<CR>
 
 "copy to outside buffer
-vnoremap <leader>Y "+y
+vnoremap <leader>y "+y
 
 "yank to end of selection
-vnoremap <leader>y y`]<Home>
+vnoremap <silent>y y`]<Home>
 
 "select all
 nnoremap <leader>a ggVG
